@@ -6,7 +6,7 @@ __human_name__ = 'functions'
 
 
 def greet(name):
-    return f"Hello {name}"
+    return f"Hello, {name}!"
 
 
 print(greet("Ali Ihsan"))

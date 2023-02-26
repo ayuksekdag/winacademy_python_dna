@@ -5,26 +5,33 @@ __human_name__ = 'strings'
 # Add your code after this line
 
 goal_0 = 32
-scorer_name0 = "Ruud Gullit"
+scorer_name_0 = "Ruud Gullit"
 goal_1 = 54
-scorer_name1 = "Marco van Basten"
-scorers = scorer_name0 + " " + str(goal_0) + ", " + scorer_name1 + " " + str(
-    goal_1)
-report = f"{scorer_name0}" + " scored in the " + f"{goal_0}nd minute "
-report = report + f"{scorer_name1}" + " scored in the " + f"{goal_1}th minute"
+scorer_name_1 = "Marco van Basten"
+scorers = f"{scorer_name_0} {goal_0}, {scorer_name_1} {goal_1}"
+print(scorers)
+report = f"{scorer_name_0} scored in the {goal_0}nd minute\n{scorer_name_1} scored in the {goal_1}th minute"
 print(report)
 
 player = "Ruud Gullit"
-first_name = player[player.find("Ruud"):player.find(" Gullit")]
+find_space_index = player.find(" ")
+first_name = player[0:find_space_index]
 print(first_name)
-last_name_len = player.find(player[-1]) - player.find("Gullit") + 1
-print(last_name_len)
-name_short = player[0] + "."
-print(name_short)
 first_name_len = len(first_name)
+print(first_name_len)
+last_name = player[find_space_index + 1:]
+print(last_name)
+last_name_len = len(last_name)
+print(last_name_len)
+name_short = player[0] + ". " + last_name
+print(name_short)
 
 chant = ""
 for i in range(first_name_len):
-    chant = chant + first_name + "!"
+    if i == 0:
+        chant = chant + first_name + "!"
+    else:
+        chant = chant + " " + first_name + "!"
+print(chant)
 
 good_chant = chant[-1] != ' '
