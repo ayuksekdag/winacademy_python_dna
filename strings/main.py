@@ -35,3 +35,4 @@ for i in range(first_name_len):
 print(chant)
 
 good_chant = chant[-1] != ' '
+print(good_chant)
