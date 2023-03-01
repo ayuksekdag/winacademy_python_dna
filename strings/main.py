@@ -13,7 +13,7 @@ print(scorers)
 report = f"{scorer_name_0} scored in the {goal_0}nd minute\n{scorer_name_1} scored in the {goal_1}th minute"
 print(report)
 
-player = "Ruud Gullit"
+player = "Ali Ihsan Yuksekdag"
 find_space_index = player.find(" ")
 first_name = player[0:find_space_index]
 print(first_name)
@@ -35,3 +35,4 @@ for i in range(first_name_len):
 print(chant)
 
 good_chant = chant[-1] != ' '
+print(good_chant)
