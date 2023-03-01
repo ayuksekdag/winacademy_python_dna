@@ -35,4 +35,8 @@ for i in range(first_name_len):
 print(chant)
 
 good_chant = chant[-1] != ' '
+<<<<<<< HEAD
 print(good_chant)
+=======
+print(good_chant)
+>>>>>>> 4503ee0ac45560fbbc3fc0aba64a6e18bfcb3f20
