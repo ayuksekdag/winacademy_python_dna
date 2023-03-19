@@ -9,9 +9,9 @@ __human_name__ = "files"
 # cur_work_file_dir = os.path.realpath(__file__)
 cur_work_dir = os.path.dirname(__file__)
 cache_dir_name = "cache"
-cache_path = cur_work_dir + f"/{cache_dir_name}"
-zip_file_loc = str(cur_work_dir) + "/data.zip"
-pattern = f"{cache_path}/*"
+cache_path = os.path.join(cur_work_dir, cache_dir_name)
+zip_file_loc = os.path.join(cur_work_dir, "data.zip")
+pattern = os.path.join(cache_path, "*")
 
 
 def clean_cache():
@@ -32,7 +32,7 @@ def cache_zip(zip_file_loc, cache_path):
         # Extracting the zip
         # into a specific location.
         zObject.extractall(path=cache_path)
-        zObject.close()
+        # zObject.close()
 
 
 def cached_files():
@@ -58,7 +58,7 @@ def find_password(cached_files):
                 except ValueError:
                     string_to_find = i
             # print(lines)
-        f.close()
+        # f.close()
     find_space_index = string_to_find.find(" ")
     password = string_to_find[find_space_index + 1 :]
     # print(password)
@@ -69,4 +69,3 @@ if __name__ == "__main__":
     clean_cache()
     cache_zip(zip_file_loc, cache_path)
     find_password(cache_path)
-    # print(len(x))
